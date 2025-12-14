@@ -1,0 +1,13 @@
+transactions.csv
+# Secrets
+service_account.json
+gcp-key.json
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# ML artifacts
+mlflow.db
+artifacts/

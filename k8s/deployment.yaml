@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fraud-api
+  namespace: fraud-ml
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fraud-api
+  template:
+    metadata:
+      labels:
+        app: fraud-api
+    spec:
+      containers:
+      - name: fraud-api
+        image: us-central1-docker.pkg.dev/sixth-sequencer-473212-e7/fraud-detection-repo/fraud-api:latest
+        ports:
+        - containerPort: 8000
